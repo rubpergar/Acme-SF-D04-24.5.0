@@ -27,3 +27,6 @@ client.progress-log.form.button.publish = Publish
 
 client.progress-log.form.error.code = This code is invalid
 client.progress-log.form.error.duplicated = This code is already used
+client.progress-log.form.error.invalid-completeness = Completeness must be between 0.00 (or the greatest progression value) and 1.00
+client.progress-log.form.error.invalid-completeness2 = In order to update this progress log, which has the maximum completeness rate, its new value has to be over the second highest completeness rate and 1.00 or less
+client.progress-log.form.error.completeness-max-exists = There is already a progress log which completeness is 1.00. Update it so you can add a new one with that value

@@ -1,6 +1,8 @@
 
 package acme.features.client.progressLog;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -62,6 +64,22 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 
 			if (progressLogWithCodeDuplicated != null)
 				super.state(progressLogWithCodeDuplicated.getId() == object.getId(), "recordId", "client.progress-log.form.error.duplicated");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("completeness")) {
+			Contract contract = object.getContract();
+			Collection<ProgressLog> progressLogs = this.repository.findManyProgressLogsbyContractId(contract.getId());
+			int numProgressLogs = progressLogs.size();
+			Double maxCompleteness = this.repository.findMaxCompletenessByContractId(contract.getId());
+			Double secondMaxCompleteness = this.repository.findSecondMaxCompletenessByContractId(contract.getId(), object.getId());
+			Double currentCompleteness = this.repository.findOneProgressLogById(object.getId()).getCompleteness();
+
+			if (numProgressLogs == 1)
+				super.state(object.getCompleteness() >= 0.00 && object.getCompleteness() <= 1.00, "completeness", "client.progress-log.form.error.invalid-completeness");
+			else if (currentCompleteness.equals(maxCompleteness))
+				super.state(object.getCompleteness() > secondMaxCompleteness && object.getCompleteness() <= 1.00, "completeness", "client.progress-log.form.error.invalid-completeness2");
+			else
+				super.state(object.getCompleteness() > maxCompleteness && object.getCompleteness() <= 1.00, "completeness", "client.progress-log.form.error.invalid-completeness");
 		}
 
 	}

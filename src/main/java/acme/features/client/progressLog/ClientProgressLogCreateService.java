@@ -1,6 +1,8 @@
 
 package acme.features.client.progressLog;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -66,6 +68,17 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 
 			existing = this.repository.findOneProgressLogByCode(object.getRecordId());
 			super.state(existing == null, "recordId", "client.progress-log.form.error.duplicated");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("completeness")) {
+			Contract contract = object.getContract();
+			Collection<ProgressLog> progressLogs = this.repository.findManyProgressLogsbyContractId(contract.getId());
+			Double maxCompleteness = this.repository.findMaxCompletenessByContractId(contract.getId());
+
+			if (progressLogs.isEmpty())
+				super.state(object.getCompleteness() >= 0.00 && object.getCompleteness() <= 1.00, "completeness", "client.progress-log.form.error.invalid-completeness");
+			else
+				super.state(object.getCompleteness() > maxCompleteness && object.getCompleteness() <= 1.00, "completeness", "client.progress-log.form.error.invalid-completeness");
 		}
 
 	}

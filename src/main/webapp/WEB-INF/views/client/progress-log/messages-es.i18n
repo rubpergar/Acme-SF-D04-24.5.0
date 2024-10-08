@@ -27,3 +27,6 @@ client.progress-log.form.button.publish = Publicar
 
 client.progress-log.form.error.code = Este código es inválido
 client.progress-log.form.error.duplicated = Este código ya está en uso
+client.progress-log.form.error.invalid-completeness = La compleción debe estar entre 0.00 (o el mayor valor de compleción) y 1.00 inlcusives.
+client.progress-log.form.error.invalid-completeness2 = Para poder actualizar este registro de progreso, el cual tiene el valor máximo de compleción, su nuevo valor debe ser superior al segundo mayor valor de compleción y menor o igual a 1
+client.progress-log.form.error.completeness-max-exists = Ya existe un registro de progreso cuyo valor es 1.00. Modifíquelo para poder añadir uno nuevo con dicha compleción
