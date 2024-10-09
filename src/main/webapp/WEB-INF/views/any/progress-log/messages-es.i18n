@@ -1,0 +1,15 @@
+
+any.progress-log.list.title = Lista de Registro de Progreso
+any.progress-log.form.title = Formulario de Registro de Progreso
+
+any.progress-log.list.label.record-id = Identificador de Registro
+any.progress-log.list.label.completeness = Compleción
+any.progress-log.list.label.comment = Comentario
+any.progress-log.list.label.registration-moment = Momento de Registro
+
+any.progress-log.form.label.record-id = Identificador de Registro
+any.progress-log.form.label.completeness = Compleción
+any.progress-log.form.label.comment = Comentario
+any.progress-log.form.label.registration-moment = Momento de Registro
+any.progress-log.form.label.responsible-person = Persona Responsable
+any.progress-log.form.label.draft-mode = Borrador

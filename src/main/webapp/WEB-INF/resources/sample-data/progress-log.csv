@@ -33,7 +33,7 @@ progresslog-26,PG-AB-0026,0.50,Lorem ipsum,2022/07/29 23:00,' or 'A'='A,true,con
 progresslog-27,PG-AB-0027,0.50,Lorem ipsum,2022/07/29 23:00,국민경제의 발전을,true,contract-01
 progresslog-28,PG-AB-0028,0.50,Lorem ipsum,2022/07/29 23:00,العظمى واعتلاء,true,contract-01
 # draft-mode data
-progresslog-29,PG-AB-0029,0.50,Lorem ipsum,2022/07/29 23:00,Lorem ipsum,false,contract-01
+progresslog-29,PG-AB-0029,0.50,Lorem ipsum,2022/07/29 23:00,Lorem ipsum,false,contract-40
 # key:contract data
 progresslog-30,PG-AB-0030,0.50,Lorem ipsum,2022/07/29 23:00,Lorem ipsum,true,contract-02
-progresslog-31,PG-AB-0031,0.50,Lorem ipsum,2022/07/29 23:00,Lorem ipsum,false,contract-06
+progresslog-31,PG-AB-0031,0.50,Lorem ipsum,2022/07/29 23:00,Lorem ipsum,true,contract-40

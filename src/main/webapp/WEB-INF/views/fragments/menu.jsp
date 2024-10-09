@@ -31,6 +31,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.project-list" action="/any/project/list"/>	
 			<acme:menu-suboption code="master.menu.anonymous.claim-list" action="/any/claim/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.code-audit-list" action="/any/code-audit/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.contract-list" action="/any/contract/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
@@ -41,6 +42,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.project-list" action="/any/project/list"/>	
 			<acme:menu-suboption code="master.menu.authenticated.objective" action="/authenticated/objective/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.all-notices" action="/authenticated/notice/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.contract-list" action="/any/contract/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -56,7 +58,6 @@
 			<acme:menu-suboption code="master.menu.administrator.list-risks" action="/administrator/risk/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.objective" action="/administrator/objective/create"/>
-			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">

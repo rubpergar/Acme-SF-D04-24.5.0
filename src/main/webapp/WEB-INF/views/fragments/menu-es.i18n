@@ -29,6 +29,7 @@ master.menu.anonymous.claim-list = Lista de Claims
 master.menu.anonymous.training-module-list = Lista de Training Modules
 master.menu.anonymous.project-list = Lista de Proyectos
 master.menu.anonymous.code-audit-list = Lista de Code Audits
+master.menu.anonymous.contract-list = Lista Contratos
 
 # master.menu.authenticated ###################################################
 

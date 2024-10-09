@@ -1,0 +1,15 @@
+
+any.progress-log.list.title = Progress Log List
+any.progress-log.form.title = Progress Log Form
+
+any.progress-log.list.label.record-id = Record Id
+any.progress-log.list.label.completeness = Completeness
+any.progress-log.list.label.comment = Comment
+any.progress-log.list.label.registration-moment = Registration Moment
+
+any.progress-log.form.label.record-id = Record Id
+any.progress-log.form.label.completeness = Completeness
+any.progress-log.form.label.comment = Comment
+any.progress-log.form.label.registration-moment = Registration Moment
+any.progress-log.form.label.responsible-person = Responsible Person
+any.progress-log.form.label.draft-mode = Draft

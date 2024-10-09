@@ -1,0 +1,18 @@
+
+any.contract.list.title = Contract List
+any.contract.form.title = Contract Form
+
+any.contract.list.label.code = Code
+any.contract.list.label.budget = Budget
+any.contract.list.label.project = Project
+
+any.contract.form.label.code = Code
+any.contract.form.label.instantiation-moment = Instantiation Moment
+any.contract.form.label.provider-name = Provider Name
+any.contract.form.label.customer-name = Customer Name
+any.contract.form.label.goals = Goals
+any.contract.form.label.budget = Budget
+any.contract.form.label.project = Project
+
+any.contract.form.button.project = Project
+any.contract.form.button.progress-logs.list = Progress Logs
